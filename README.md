@@ -1,13 +1,23 @@
 ---
-title: "Scraping Document Metadata in R"
-author: "Harry Oppenheimer"
-output:
-  md_document:
-    variant: markdown_github
+output: github_document
+bibliography: "references.bib"
 ---
 
-**scrapeR** is a package for simply scraping metadata from files using R.
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-To install the latest version you can pull from GitHub:
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  eval = FALSE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+library(knitr)
+```
 
-devtools::install_github("HOppenheimer/scrapeR")
+# scrapeR
+
+scrapeR allows for easy scraping of metadata from text and pdf documents in R.
+
+
