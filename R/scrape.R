@@ -9,7 +9,7 @@
 #' @export
 #' @examples
 #' scrape()
-wd <- "~/'dfs"
+
 scrape <- function(wd = NULL,
                    filetype = NULL,
                    verbose = F,
