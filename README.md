@@ -16,7 +16,7 @@ dplyr
 ### Installing
 
 ```
-devtools::github_install("HOppenheimer/scrapeR")
+devtools::install_github("HOppenheimer/scrapeR")
 ```
 
 
