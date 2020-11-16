@@ -2,14 +2,14 @@
 % Please edit documentation in R/scrape.R
 \name{scrape}
 \alias{scrape}
-\title{Metadata in documents}
+\title{The scrape function allows you to scrape exif data from files in your computer. It defaults to the current working directory, pdf documents only, and includes all fields.}
 \usage{
 scrape(wd = NULL, filetype = NULL, verbose = F, cutoff = 1)
 }
 \arguments{
 \item{wd}{A file directory, defaults to current working directory}
 
-\item{filetype}{The type of files to scrape, defaults to pdf only}
+\item{filetype}{\verb{pdf'' or }all''. The type of files to scrape, defaults to pdf only}
 
 \item{verbose}{Should there be a progress bar?}
 
@@ -20,7 +20,7 @@ A dataframe with the metadata for all documents within the
 file path directory
 }
 \description{
-Metadata in documents
+The scrape function allows you to scrape exif data from files in your computer. It defaults to the current working directory, pdf documents only, and includes all fields.
 }
 \examples{
 scrape()
