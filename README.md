@@ -6,8 +6,6 @@ scrapeR is a package that allows for easy scraping of metadata from text and pdf
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
 ```
 exifr
 dplyr
