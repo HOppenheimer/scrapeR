@@ -29,6 +29,10 @@ scrape <- function(wd = NULL,
          files <- list.files(path = wd, pattern = "*.pdf$", recursive = TRUE),
          files <- list.files(path = wd, recursive = TRUE, pattern = "\\.pdf$|\\.doc$"))
 
+  if(identical(files, character(0))){
+    stop("No files in this directory")
+  }
+
   files <- paste(wd, files, sep = "/")
 
   d <- data.frame(NA)

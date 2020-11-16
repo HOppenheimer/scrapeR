@@ -11,6 +11,8 @@ scrape(wd = NULL, filetype = NULL, verbose = F, cutoff = 1)
 
 \item{filetype}{The type of files to scrape, defaults to pdf only}
 
+\item{verbose}{Should there be a progress bar?}
+
 \item{cutoff}{The proportion of documents with metadata field to return, defaults to 1 (all fields)}
 }
 \value{
