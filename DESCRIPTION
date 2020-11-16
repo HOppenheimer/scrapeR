@@ -6,7 +6,7 @@ Authors@R:
            family = "Oppenheimer",
            role = c("aut", "cre"),
            email = "hoppenheimer@g.harvard.edu",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           comment = c(ORCID = "0000-0002-4500-0712"))
 Description: This package provides support for document metadata scraping in R/R-Studio.
 License: `use_mit_license()`, `use_gpl3_license()` 
 Encoding: UTF-8
