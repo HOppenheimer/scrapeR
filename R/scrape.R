@@ -4,6 +4,7 @@
 #' @param wd A file directory, defaults to current working directory
 #' @param filetype The type of files to scrape, defaults to pdf only
 #' @param cutoff The proportion of documents with metadata field to return, defaults to 1 (all fields)
+#' @param verbose Should there be a progress bar?
 #' @return A dataframe with the metadata for all documents within the
 #'    file path directory
 #' @export
