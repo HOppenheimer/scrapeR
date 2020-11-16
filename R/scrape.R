@@ -28,7 +28,7 @@ scrape <- function(wd = NULL,
          files <- list.files(path = wd, pattern = "*.pdf$", recursive = TRUE),
          files <- list.files(path = wd, recursive = TRUE, pattern = "\\.pdf$|\\.doc$"))
 
-  files <- paste(wd, files, sep = "")
+  files <- paste(wd, files, sep = "/")
 
   d <- data.frame(NA)
 
