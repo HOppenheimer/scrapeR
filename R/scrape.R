@@ -35,6 +35,16 @@ scrape <- function(wd = NULL,
 
   files <- paste(wd, files, sep = "/")
 
+  if(length(files)>250){
+    prompt1 <- paste("You want to scrape", length(files), "files, continue? [y/n]:\n Or empty line to continue.", sep = " ")
+    continue <- readline(prompt= prompt1)
+    if(continue == "n"){
+      opt <- options(show.error.messages = FALSE)
+      on.exit(options(opt))
+      stop()
+      }
+  }
+
   d <- data.frame(NA)
 
   if(verbose == T){pb = utils::txtProgressBar(min = 0, max = length(files), initial = 0) }
