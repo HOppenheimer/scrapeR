@@ -32,10 +32,10 @@ scrape <- function(wd = NULL,
 
   d <- data.frame(NA)
 
-  if(verbose == T){pb = txtProgressBar(min = 0, max = length(files), initial = 0) }
+  if(verbose == T){pb = utils::txtProgressBar(min = 0, max = length(files), initial = 0) }
 
   for(i in 1:length(files)){di <- tryCatch(exifr::read_exif(files[i]), error = function(e) e)
-  d <- dplyr::bind_rows(utils::mutate_all(d, as.character), dplyr::mutate_all(di, as.character))
+  d <- dplyr::bind_rows(dplyr::mutate_all(d, as.character), dplyr::mutate_all(di, as.character))
   if(verbose == T){utils::setTxtProgressBar(pb,i)}}
 
   d <- d[,-1]
