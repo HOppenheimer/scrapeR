@@ -2,7 +2,7 @@
 % Please edit documentation in R/scrape.R
 \name{scrape}
 \alias{scrape}
-\title{The scrape function allows you to scrape exif data from files in your computer. It defaults to the current working directory, pdf documents only, and includes all fields.}
+\title{Scrape metadata}
 \usage{
 scrape(wd = NULL, filetype = NULL, verbose = F, cutoff = 1)
 }
@@ -20,7 +20,7 @@ A dataframe with the metadata for all documents within the
 file path directory
 }
 \description{
-The scrape function allows you to scrape exif data from files in your computer. It defaults to the current working directory, pdf documents only, and includes all fields.
+The scrape function allows you to scrape exif data from files in your computer. It defaults to the current working directory, pdf documents only, and all fields.
 }
 \examples{
 scrape()

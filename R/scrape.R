@@ -1,4 +1,6 @@
 
+#' Scrape metadata
+#'
 #' The scrape function allows you to scrape exif data from files in your computer. It defaults to the current working directory, pdf documents only, and all fields.
 #'
 #' @param wd A file directory, defaults to current working directory
