@@ -15,8 +15,8 @@
 
 scrape <- function(wd = NULL,
                    filetype = NULL,
-                   verbose = F,
-                   cutoff = 1){
+                   verbose = T,
+                   cutoff = 0){
 
   if(is.null(filetype)){filetype <- "pdf"}
 
@@ -28,8 +28,8 @@ scrape <- function(wd = NULL,
   }
 
   ifelse(filetype == "all",
-         files <- list.files(path = wd, pattern = "*.pdf$", recursive = TRUE),
-         files <- list.files(path = wd, recursive = TRUE, pattern = "\\.pdf$|\\.doc$|\\.docx$|\\.txt$|\\.rtf|\\.ppt|\\.pptx"))
+         files <- list.files(path = wd, recursive = TRUE, pattern = "\\.pdf$|\\.doc$|\\.docx$|\\.txt$|\\.rtf|\\.ppt|\\.pptx"),
+         files <- list.files(path = wd, pattern = "*.pdf$", recursive = TRUE))
 
   if(identical(files, character(0))){
     stop("No files in this directory")
@@ -59,7 +59,7 @@ scrape <- function(wd = NULL,
   d <- d[-1,]
   d$file <- files
   na_count <- 1 - (sapply(d, function(y) sum(length(which(is.na(y))))) / nrow(d))
-  d <- d[,order(na_count)]
+  d <- d[,rev(order(na_count))]
   d <- d[,which(na_count>=cutoff)]
   d
 }
